@@ -10,6 +10,18 @@
 #                                                                              #
 # **************************************************************************** #
 
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hezzahir <hezzahir@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/11/08 15:00:21 by hezzahir          #+#    #+#              #
+#    Updated: 2020/01/04 20:35:13 by hezzahir         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 HEAD = libft.h
@@ -26,16 +38,18 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c \
 	ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c \
 	ft_strsub.c ft_strtrim.c ft_swap.c ft_tolower.c ft_strlen.c \
-	ft_toupper.c ft_strdup.c ft_strcat.c ft_strnequ.c get_next_line.c
+	ft_toupper.c ft_strdup.c ft_strcat.c ft_strnequ.c get_next_line.c \
+	is_int.c is_double.c is_color.c
 
 all: $(NAME)
 
 $(NAME):
-	gcc -I$(HEAD) -Wall -Werror -Wextra -c *.c
-	ar rc $(NAME) *.o
-	ranlib $(NAME)
+	@gcc -I$(HEAD) -Wall -Werror -Wextra -c $(SRC)
+	@ar rcs $(NAME) *.o
+	@echo "Compilation libft: \033[1;32mOK\033[m"
 clean:
 	/bin/rm -rf *.o
 fclean: clean
 	/bin/rm -f $(NAME)
 re: fclean all
+
