@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -92,4 +93,7 @@ int				ft_isnegative(int i);
 int				ft_isupper(int c);
 int				ft_islower(int c);
 int				get_next_line(const int fd, char **line);
+int				is_double(char *word);
+int				is_int(char *word);
+int				is_color(char *word);
 #endif
