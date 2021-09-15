@@ -17,7 +17,7 @@
 - [x] 01. functions .c (also bonus part)
 - [x] 02. Makefile
 - [x] 03. My GNL function 
-- [x] 03. an author file
+- [x] 03. Author file
 
 ## Resources :
 
